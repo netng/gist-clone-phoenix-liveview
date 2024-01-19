@@ -1,0 +1,110 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* This file is for your main application CSS */
+@font-face {
+    font-family: "WorkSans";
+    src: url("/fonts/WorkSans-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "WorkSans";
+    src: url("/fonts/WorkSans-Bold.ttf");
+    font-weight: bold;
+    font-style: normal;
+}
+
+.em-gradient {
+    background-image: linear-gradient(to bottom, #631A61, #551653, #340E33, #010101);
+    height: 225px;
+}
+
+.dropdown-menu-arrow::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: calc(95% - 12px);
+    border-width: 0 5px 5px 5px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+}
+
+.menu-item {
+    @apply block px-4 py-2 text-sm text-white font-brand font-reguler
+}
+
+.menu-item:hover {
+    @apply hover:text-emDark-light
+}
+
+form input[type="text"] {
+    @apply bg-emDark-dark font-brand font-reguler text-white text-xs border border-white
+}
+
+form input[type="text"]:focus {
+    @apply focus:outline-none focus:border-emLavender focus:ring-0
+}
+
+.textarea {
+    @apply bg-emDark-dark font-brand font-reguler text-white text-xs border border-white h-[300px] resize-none;
+    border-top: none;
+    border-left: none;
+}
+
+.textarea:focus {
+    @apply focus:outline-none focus:border-white focus:ring-0
+}
+
+.line-numbers {
+    @apply border border-white font-brand font-reguler text-xs text-emDark-light bg-emDark-dark h-[300px] w-[54px] text-right overflow-hidden resize-none;
+    border-right: none;
+    border-top: none;
+}
+
+.line-numbers:focus {
+    @apply focus:outline-none focus:border-white focus:ring-0
+}
+
+.syntax-area {
+    @apply bg-emSyntax border text-xs border-white h-auto;
+    border-top: none;
+    border-left: none;
+}
+
+.syntax-numbers {
+    @apply border border-white font-brand font-reguler text-xs bg-emDark-dark w-[54px] h-auto overflow-hidden resize-none;
+    border-right: none;
+    border-top: none;
+}
+
+.syntax-numbers:focus {
+    @apply focus:outline-none focus:border-white focus:ring-0
+}
+
+.create-button {
+    @apply bg-emPurple border border-white font-brand font-reguler text-black text-base
+}
+
+.create-button:hover {
+    @apply hover:bg-emPurple-dark text-emDark-light border-emDark-light
+}
+
+.round-image-padding {
+    border-radius: 50%;
+    border: 1.5px solid #fff;
+    padding: 4px;
+}
+
+.img-down-arrow::after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 45%;
+    transform: translateY(-50%);
+    border-width: 3px 3px 0 3px;
+    border-color: white transparent transparent transparent;
+    border-style: solid;
+}
